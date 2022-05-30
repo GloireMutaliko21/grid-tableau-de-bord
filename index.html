@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    <title>Tableau de bord</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <h3>Tableau de bord</h3>
+        <div class="profile">
+            <span class="mdi mdi-search-web" style="font-size:28px"></span>
+            <img src="assets/images.jpeg" alt="">
+            <p class="profile-name">Gloire Mutaliko</p>
+        </div>        
+    </nav>
+
+    <!-- Menu humberger -->
+    <input type="checkbox" id="burger">
+    <label for="burger" class="menu-burger"><span class="mdi mdi-menu"></span></label>
+
+    <div class="sidebar">
+        <div class="sidebar-menu">
+            <span class="mdi mdi-clipboard-text"></span>
+            <p>Aperçu</p>
+        </div>
+        <div class="sidebar-menu">
+            <span class="mdi mdi-account-group"></span>
+            <p>Equipes</p>
+        </div>
+        <div class="sidebar-menu">
+            <span class="mdi mdi-credit-card-check-outline"></span>
+            <p>Paiement</p>
+        </div>
+        <div class="sidebar-menu">
+            <span class="mdi mdi-chart-multiple" ></span>
+            <p>Statistique</p>
+        </div>
+        <div class="sidebar-menu">
+            <span class="mdi mdi-card-account-mail-outline" ></span>
+            <p>Contact</p>
+        </div>
+        <div class="sidebar-menu">
+            <span class="mdi mdi-cog"></span>
+            <p>Réglages</p>
+        </div>
+    </div>
+
+    <!-- Contenu de la page -->
+
+    <main>
+        <div class="container">
+            <!-- 4 cards top -->
+            <div class="card total1">
+                <div class="info">
+                    <div class="info-detail">
+                        <h4>Revenue</h4>
+                        <p>Somme de revenue annuel</p>
+                        <h3>3,256,837 <span>$</span></h3>
+                    </div>
+                    <div class="info-image">
+                        <i class="mdi mdi-currency-usd"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card total2">
+                <div class="info">
+                    <div class="info-detail">
+                        <h4>Commandes</h4>
+                        <p>Commandes passées par an</p>
+                        <h3>8,960 <span>Comm</span></h3>
+                    </div>
+                    <div class="info-image">
+                        <i class="mdi mdi-cart-check"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card total3">
+                <div class="info">
+                    <div class="info-detail">
+                        <h4>Partenaires</h4>
+                        <p>Nos partenaires actifs</p>
+                        <h3>650 <span>Sociétés</span></h3>
+                    </div>
+                    <div class="info-image">
+                        <i class="mdi mdi-account-switch"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card total4">
+                <div class="info">
+                    <div class="info-detail">
+                        <h4>Commandes par jour</h4>
+                        <p>Nos commandes journaliers</p>
+                        <h3>56 <span>Orders</span></h3>
+                    </div>
+                    <div class="info-image">
+                        <i class="mdi mdi-truck-cargo-container"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 cards bottom -->
+            <div class="card detail">
+                <div class="detail-header">
+                    <h4>All Orders</h4>
+                    <button>See More</button>
+                </div>
+                <table>
+                    <tr>
+                        <th>Order #</th>
+                        <th>Company Name</th>
+                        <th>Status</th>
+                        <th>Total</th>
+                        <th>Created</th>
+                        <th>Last Updated</th>
+                    </tr>
+                    <tr>
+                        <td>#PW-0001</td>
+                        <td>Potential Corp</td>
+                        <td><span class="status onprogress"><i class="mdi mdi-circle-slice-8"></i> ONPROGRESS</span></td>
+                        <td>3,149.19 USD</td>
+                        <td>Apr 11, 2021</td>
+                        <td>Today</td>
+                    </tr>
+                    <tr>
+                        <td>#PW-0002</td>
+                        <td>Webcode Inc</td>
+                        <td><span class="status confirmed"><i class="mdi mdi-circle-slice-8"></i> CONFIRMED</span></td>
+                        <td>830.78 USD</td>
+                        <td>Mar 29, 2021</td>
+                        <td>Yesterday</td>
+                    </tr>
+                    <tr>
+                        <td>#PW-0003</td>
+                        <td>Coding time</td>
+                        <td><span class="status fulfilled"><i class="mdi mdi-circle-slice-8"></i> FULFILLED</span></td>
+                        <td>928.81 USD</td>
+                        <td>Feb 10, 2020</td>
+                        <td>Feb 21, 2021</td>
+                    </tr>
+                    <tr>
+                        <td>#PW-0004</td>
+                        <td>Microsoft</td>
+                        <td><span class="status fulfilled"><i class="mdi mdi-circle-slice-8"></i> FULFILLED</span></td>
+                        <td>6,239.53 USD</td>
+                        <td>Dec 11, 2020</td>
+                        <td>Jan 23, 2021</td>
+                    </tr>
+                    <tr>
+                        <td>#PW-0005</td>
+                        <td>Apple inc</td>
+                        <td><span class="status confirmed"><i class="mdi mdi-circle-slice-8"></i> CONFIRMED</span></td>
+                        <td>187.13 USD</td>
+                        <td>Nov 20, 2020</td>
+                        <td>Jan 09, 2021</td>
+                    </tr>
+                    <tr>
+                        <td>#PW-0006</td>
+                        <td>Penerang</td>
+                        <td><span class="status onprogress"><i class="mdi mdi-circle-slice-8"></i> ONPROGRESS</span></td>
+                        <td>624.85 USD</td>
+                        <td>Nov 01, 2020</td>
+                        <td>Dec 15, 2020</td>
+                    </tr>
+                    <tr>
+                        <td>#PW-0007</td>
+                        <td>Paralon Corp</td>
+                        <td><span class="status confirmed"><i class="mdi mdi-circle-slice-8"></i> CONFIRMED</span></td>
+                        <td>2,483.09 USD</td>
+                        <td>Oct 13, 2020</td>
+                        <td>Oct 21, 2020</td>
+                    </tr>
+                    <tr>
+                        <td>#PW-0008</td>
+                        <td>Coding scole</td>
+                        <td><span class="status onprogress"><i class="mdi mdi-circle-slice-8"></i> ONPROGRESS</span></td>
+                        <td>1,247.00 USD</td>
+                        <td>Sep 20, 2020</td>
+                        <td>Oct 13, 2020</td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="card customer">
+                <h2>Sales activities</h2>
+                <div class="customer-wrapper">
+                    <img src="https://picsum.photos/200/200?random=2" alt="" class="customer-image">
+                    <div class="customer-name">
+                        <h4>Gloire Mutaliko</h4>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <p class="customer-date">Today</p>
+                </div>
+                <div class="customer-wrapper">
+                    <img src="https://picsum.photos/200/200?random=3" alt="" class="customer-image">
+                    <div class="customer-name">
+                        <h4>Rolly Kadima</h4>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                    <p class="customer-date">22/01/2021</p>
+                </div>
+                <div class="customer-wrapper">
+                    <img src="https://picsum.photos/200/200?random=4" alt="" class="customer-image">
+                    <div class="customer-name">
+                        <h4>Urbain Bulakali</h4>
+                        <p>Lorem ipsum euro sit cum.</p>
+                    </div>
+                    <p class="customer-date">Yesterday</p>
+                </div>
+                <div class="customer-wrapper">
+                    <img src="https://picsum.photos/200/200?random=5" alt="" class="customer-image">
+                    <div class="customer-name">
+                        <h4>Annette Salama</h4>
+                        <p>Lorem, ipsum dolor.</p>
+                    </div>
+                    <p class="customer-date">Today</p>
+                </div>
+                <div class="customer-wrapper">
+                    <img src="https://picsum.photos/200/200?random=6" alt="" class="customer-image">
+                    <div class="customer-name">
+                        <h4>Doody Matabaro</h4>
+                        <p>Lorem ipsum d</p>
+                    </div>
+                    <p class="customer-date">16/02/2021</p>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

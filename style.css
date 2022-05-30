@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+}
+
+h2 {
+    font: 18px;
+    padding: 15px 0;
+}
+
+h2>span {
+    font-size: 14px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    height: 55px;
+    padding-left: 6rem;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+.profile {
+    display: flex;
+    width: 32%;
+    max-width: 200px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 50px blueviolet;
+    object-fit: cover;
+}
+
+.profile p {
+    margin-left: -15px;
+}
+
+#burger {
+    display: none;
+}
+
+.menu-burger {
+    color: #1e3a8a;
+    position: fixed;
+    z-index: 2;
+    top: 10px;
+    left: 25px;
+    font-size: 28px;
+    float: right;
+}
+
+.menu-burger:hover {
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 200px;
+    left: 0;
+    top: 0;
+    padding: 80px 0 20px 0;
+    color: #fff;
+    background-color: #2d2b98;
+    box-shadow: 2px 0 5px rgba(O, 0, 0, 0.5);
+}
+
+.sidebar-menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar-menu:hover {
+    background-color: #fff;
+    color: #1e3a8a;
+    cursor: pointer;
+}
+
+.sidebar-menu p {
+    padding-left: 25px;
+}
+
+.sidebar-menu span {
+    font-size: 20px;
+}
+
+#burger:checked~.sidebar {
+    width: 70px;
+}
+
+#burger:checked~.sidebar .sidebar-menu p {
+    display: none;
+}
+
+#burger:checked~main {
+    padding: 6rem 2rem 2rem 6rem;
+}
+
+/* contenu de la page */
+
+main {
+    min-height: 100%;
+    padding: 6rem 1rem 2rem 14rem;
+    color: #201f2b;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    grid-template-areas:
+        "total1 total2 total3 total4 total4"
+        "detail detail detail customer customer"
+        "detail detail detail customer customer";
+}
+
+.card {
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.card:hover {
+    box-shadow: 10px 10px 80px rebeccapurple;
+}
+
+.total1 {
+    background-color: #4c1d95;
+    color: #fff;
+    grid-area: total1;
+    border-left: 5px solid #f89ab4;
+}
+
+.total2 {
+    background-color: #fbbf24;
+    color: white;
+    grid-area: total2;
+    border-left: 5px solid #f89ab4;
+}
+
+.total3 {
+    background-color: #14532d;
+    color: white;
+    grid-area: total3;
+    border-left: 5px solid #f89ab4;
+}
+
+.total4 {
+    background-color: #701a75;
+    color: white;
+    grid-area: total4;
+    border-left: 5px solid #f89ab4;
+}
+
+.detail {
+    background-color: #f0fdf4;
+    grid-area: detail;
+}
+
+.customer {
+    grid-area: customer;
+    background-color: #fff;
+}
+
+.info {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-detail h3 {
+    font-size: 20px;
+}
+
+.info-detail p {
+    font-size: 14px;
+}
+
+.info-image {
+    font-size: 50px;
+    color: #a3e635;
+}
+
+.detail-header {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail-header button {
+    height: 30px;
+    width: 120px;
+    border: 1px solid #2d2b98;
+    background-color: #2d2b98;
+    color: #f2f2f2;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.detail-header button:hover {
+    background-color: transparent;
+    color: #2d2b98;
+}
+
+.detail table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.detail table tr:nth-child(odd) {
+    background-color: #f8f8fb;
+}
+
+.detail table th {
+    background-color: #f4f4fb;
+}
+
+.detail table th,
+.detail table td {
+    padding: 0.8rem 0.2rem;
+    text-align: left;
+    min-width: 120px;
+    font-size: 14px;
+}
+
+.detail table tr:hover {
+    background-color: #f2f2f2;
+    border-bottom: 2px solid #2d2b98;
+}
+
+.detail table tr td:nth-child(2),
+.detail table tr td:nth-child(3) {
+    min-width: 150px;
+}
+
+.status {
+    padding: 0.3rem 1rem;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 1;
+    font-weight: 0.7rem;
+}
+
+.onprogress {
+    background-color: #fff2d7;
+    color: #ffa705;
+}
+
+.confirmed {
+    background-color: #d7effc;
+    color: #15a1fe;
+}
+
+.fulfilled {
+    background-color: #dcedde;
+    color: #37aa38;
+}
+
+.customer-wrapper {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 0.4fr;
+    grid-auto-flow: column;
+    margin: 10px 0;
+    min-width: 230px;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.customer-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.customer-name>p,
+.customer-date {
+    font-size: 0.9rem;
+}
+
+.customer-date {
+    text-align: right;
+    color: #9092a9;
+}
+
+/* Responsivity */
+
+@media screen and (max-width: 980px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "total1 total2"
+            "total3 total4"
+            "detail detail"
+            "customer customer";
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .customer-name,
+    .profile-name {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    main {
+        padding: 6rem 2rem 2rem 2rem;
+    }
+
+    #burger:checked~.sidebar {
+        width: 200px;
+        display: block;
+    }
+
+    #burger:checked~.sidebar .sidebar-menu>p {
+        display: block;
+    }
+
+    #burger:checked~main {
+        padding: 6rem 2rem 2rem 2rem;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "total1"
+            "total2"
+            "total3"
+            "total4"
+            "detail"
+            "customer";
+    }
+
+    .detail table {
+        font-size: 0.9rem;
+    }
+}
